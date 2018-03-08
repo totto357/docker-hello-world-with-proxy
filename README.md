@@ -9,7 +9,7 @@ git clone https://github.com/totto357/docker-hello-world-with-proxy.git
 cd docker-hello-world-with-proxy
 ```
 
-If you do **NOT** created `common_link` networks,
+If you did **NOT** create a `common_link` network,
 
 ```
 docker network create --driver bridge common_link
