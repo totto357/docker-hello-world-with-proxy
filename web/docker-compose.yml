@@ -4,15 +4,11 @@ services:
   web:
     image: crccheck/hello-world
     container_name: hello-world-web
-    ports:
-    - "8000:8000" 
     restart: always
+    networks:
+    - common_link
 
 networks:
-  default:
-    external:
-      name: common_link
-
-
-
+  common_link:
+    external: true
 
