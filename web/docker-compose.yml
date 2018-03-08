@@ -6,6 +6,7 @@ services:
     container_name: hello-world-web
     ports:
     - "8000:8000" 
+    restart: always
 
 networks:
   default:
