@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  web:
+    image: crccheck/hello-world
+    container_name: hello-world-web
+    ports:
+    - "8000:8000" 
+
+networks:
+  default:
+    external:
+      name: common_link
+
+
+
+
