@@ -22,9 +22,6 @@ $ docker-compose -d up
 
 # Make sure hellowold is displayed
 $ curl http://localhost/hello
-
-# If docker is started up on external server,
-$ curl http://{SERVER_IP}/hello
 <xmp>
 Hello World
 
@@ -41,6 +38,6 @@ Hello World
 ```
 
 If docker is started up on external server, as follows
-```
+```console
 $ curl http://{SERVER_IP}/hello
 ```
