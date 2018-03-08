@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-In your terminal, 
+In your terminal, or in the server on docker is running,
 
 ```console
 # Clone this project
@@ -37,7 +37,8 @@ Hello World
 </xmp>
 ```
 
-If docker is started up on external server, as follows
+If docker is started up on external server, as follows in your local terminal
 ```console
 $ curl http://{SERVER_IP}/hello
 ```
+
