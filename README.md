@@ -2,29 +2,45 @@
 
 ## Getting Started
 
-Clone this project,
+In your terminal, 
 
+```console
+# Clone this project
+$ git clone https://github.com/totto357/docker-hello-world-with-proxy.git
+$ cd docker-hello-world-with-proxy
+
+# If you did **NOT** create a `common_link` network
+$ docker network create --driver bridge common_link
+
+# Launch a proxy server (`hello-world-proxy` container),
+$ cd proxy
+$ docker-compose -d up
+
+# Launch a web server (`hello-world-web` container),
+$ cd ../web
+$ docker-compose -d up
+
+# Make sure hellowold is displayed
+$ curl http://localhost/hello
+
+# If docker is started up on external server,
+$ curl http://{SERVER_IP}/hello
+<xmp>
+Hello World
+
+
+                                       ##         .
+                                 ## ## ##        ==
+                              ## ## ## ## ##    ===
+                           /""""""""""""""""\___/ ===
+                      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+                           \______ o          _,/
+                            \      \       _,'
+                             `'--.._\..--''
+</xmp>
 ```
-git clone https://github.com/totto357/docker-hello-world-with-proxy.git
-cd docker-hello-world-with-proxy
+
+If docker is started up on external server, as follows
 ```
-
-If you did **NOT** create a `common_link` network,
-
-```
-docker network create --driver bridge common_link
-```
-
-Launch `hello-world-proxy` container,
-
-``` 
-cd proxy
-docker-compose -d up
-```
-
-Launch `hello-world-web` container,
-
-``` 
-cd ../web
-docker-compose -d up
+$ curl http://{SERVER_IP}/hello
 ```
